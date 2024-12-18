@@ -1,4 +1,4 @@
-// File: pages/faqs.js
+// File: pages/faqs.tsx
 import { useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
@@ -13,9 +13,9 @@ export default function FAQSection() {
     { question: "How do I contact Umul Qura  for support?", answer: "You can contact Umul qura support via the help section or email support@bayyinah.tv." },
   ];
 
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const toggleFAQ = (index) => {
+  const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
