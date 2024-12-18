@@ -24,7 +24,7 @@ export default function Contact() {
   ];
 
   return (
-    <div className="bg-gray-900 min-h-screen py-12">
+    <div className="bg-gray-900 min-h-screen py-12" id="contact">
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {contacts.map((contact) => (
           <div

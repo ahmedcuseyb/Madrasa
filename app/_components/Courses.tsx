@@ -38,7 +38,7 @@ const courses = [
 
 export default function CoursesPage() {
   return (
-    <div className="bg-gray-900 py-10 px-6">
+    <div className="bg-gray-900 py-10 px-6" id='course'>
        <div className="text-white flex flex-col justify-center items-center text-center bg-gray-400 px-4">
   <h1 className="text-5xl font-bold mb-4">Lorem Resource</h1>
   <p className="text-lg max-w-3xl">

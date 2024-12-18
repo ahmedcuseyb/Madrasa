@@ -3,7 +3,12 @@ import { useState, useEffect, useRef } from 'react';
 import Link from "next/link";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+// import { FaWhatsapp, FaFacebookMessenger, FaPhoneAlt, FaTwitter } from 'react-icons/fa';
+import { faXTwitter, faTelegram,faFacebook} from '@fortawesome/free-brands-svg-icons';
+
+
 import Image from 'next/image';
 
 const links = ['About', 'Course', 'Contact'];
@@ -73,14 +78,39 @@ export default function Header() {
         <button className='hidden md:block bg-[#c68958] p-3 px-10 rounded-lg  transition-transform duration-300 hover:scale-105'>
         <a href="/signup" className="text-[#303085]">Apply Online</a>
           </button>
-        {/* <button className='hidden md:block bg-[#c68958] p-3 px-10 rounded-lg  transition-transform duration-300 hover:scale-105'>
+        <button className='hidden md:block bg-[#c68958] p-3 px-10 rounded-lg  transition-transform duration-300 hover:scale-105'>
         <a href="/signin" className="text-[#4B478A]">Sign In</a>
          
-          </button> */}
-        <button className='hidden md:block bg-[#c68958] p-3 px-10 rounded-lg text-[#4B478A] transition-transform duration-300 hover:scale-105'>
+          </button>
+          {/* <button className='hidden md:block bg-[#c68958] p-3 px-10 rounded-lg text-[#4B478A] transition-transform duration-300 hover:scale-105'>
           Email us
-        </button>
+        </button> */}
+           <Link
 
+href='https://twitter.com'
+target='_blank'
+rel='noopener noreferrer'
+className='text-white hover:text-[#F1C017]'
+>
+<FontAwesomeIcon icon={faXTwitter} size="2x" />
+</Link>
+{/* <Link
+href='https://instagram.com'
+target='_blank'
+rel='noopener noreferrer'
+className='text-white hover:text-[#F1C017]'
+>
+<FontAwesomeIcon icon={faTelegram} size="2x" />
+</Link> */}
+<Link
+  href="https://www.facebook.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-white hover:text-[#1877F2]"
+>
+  <FontAwesomeIcon icon={faFacebook} className="w-6 h-6" />
+</Link>
+      
       </ul>
 
       <div className='md:hidden' onClick={() => setIsOpen(true)}>
@@ -126,15 +156,15 @@ export default function Header() {
                 </li>
               ))}
             </ul>
-            <button className='hidden md:block bg-[#c68958] p-3 px-10 rounded-lg  transition-transform duration-300 hover:scale-105'>
+            <button className='bg-[#c68958] p-3 px-10 rounded-lg  transition-transform duration-300 hover:scale-105'>
               <a href="/signup" className="text-[#303085]">Apply Online</a>
             </button>
-        <button className='hidden md:block bg-[#c68958] p-3 px-10 rounded-lg  transition-transform duration-300 hover:scale-105'>
-        <a href="/signin" className="text-[#4B478A]">Sign In</a>
+        <button className='bg-[#c68958] p-3 px-10 rounded-lg  transition-transform duration-300 hover:scale-105'>
+        <a href="/signIn" className="text-[#4B478A]">Sign In</a>
          
           </button>
             <button className='bg-[#c68958] text-[#4B478A] p-3 px-10 rounded-lg font-medium mt-4 mx-4 transition-transform duration-300 hover:scale-105'>
-              Email us 
+              Email me 
             </button>
           </>
         )}

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function WhyUs() {
   return (
-    <div className="bg-white min-h-screen py-12">
+    <div className="bg-white min-h-screen py-12" id="whyUs">
       <div className="container mx-auto px-6 lg:px-20 flex flex-col lg:flex-row items-center gap-8">
         {/* Left Section: Image */}
         <div className="flex-1 w-full">
