@@ -156,10 +156,10 @@ className='text-white hover:text-[#F1C017]'
                 </li>
               ))}
             </ul>
-            <button className='bg-[#c68958] p-3 px-10 rounded-lg  transition-transform duration-300 hover:scale-105'>
+            <button className='ml-5 bg-[#c68958] p-3 px-10 rounded-lg  transition-transform duration-300 hover:scale-105'>
               <a href="/signup" className="text-[#303085]">Apply Online</a>
             </button>
-        <button className='bg-[#c68958] p-3 px-10 rounded-lg  transition-transform duration-300 hover:scale-105'>
+        <button className='ml-5 mt-5 bg-[#c68958] p-3 px-10 rounded-lg  transition-transform duration-300 hover:scale-105'>
         <a href="/signIn" className="text-[#4B478A]">Sign In</a>
          
           </button>
