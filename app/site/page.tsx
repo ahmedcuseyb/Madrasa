@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Calendar, Users, Bell, ChevronRight, GraduationCap, Library, Award } from 'lucide-react';
+import { BookOpen, Calendar, Users, Bell, ChevronRight, GraduationCap, Library, Award, Quote } from 'lucide-react';
 
 function Navbar() {
   return (
@@ -81,6 +81,59 @@ function Features() {
               <div className="text-blue-600 mb-4">{feature.icon}</div>
               <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
               <p className="text-gray-600">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Testimonials() {
+  const testimonials = [
+    {
+      content: "Excellence Academy has transformed my daughter's approach to learning. The teachers here don't just teach; they inspire and nurture a genuine love for knowledge.",
+      author: "Sarah Johnson",
+      role: "Parent",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+    },
+    {
+      content: "The opportunities I've had at Excellence Academy have been incredible. From advanced placement courses to leadership programs, I feel prepared for university and beyond.",
+      author: "Michael Chen",
+      role: "Senior Student",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+    },
+    {
+      content: "As an alumnus, I can confidently say that my years at Excellence Academy laid the foundation for my success. The values and skills I learned here continue to guide me.",
+      author: "Emily Rodriguez",
+      role: "Alumni, Class of 2020",
+      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+    }
+  ];
+
+  return (
+    <div className="py-16 bg-blue-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-white">What Our Community Says</h2>
+          <p className="mt-4 text-lg text-blue-200">Hear from our students, parents, and alumni</p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="bg-white rounded-lg p-8 shadow-lg relative">
+              <Quote className="absolute top-4 right-4 h-8 w-8 text-blue-200" />
+              <p className="text-gray-600 mb-6 italic">{testimonial.content}</p>
+              <div className="flex items-center">
+                <img 
+                  src={testimonial.image} 
+                  alt={testimonial.author}
+                  className="h-12 w-12 rounded-full object-cover mr-4"
+                />
+                <div>
+                  <h4 className="font-semibold text-gray-900">{testimonial.author}</h4>
+                  <p className="text-sm text-gray-500">{testimonial.role}</p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
@@ -208,6 +261,7 @@ function App() {
       <Navbar />
       <Hero />
       <Features />
+      <Testimonials />
       <NewsEvents />
       <Footer />
     </div>
